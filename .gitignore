@@ -1,0 +1,6 @@
+node_modules
+dist
+build
+.env
+server/api/node_modules
+client/node_modules

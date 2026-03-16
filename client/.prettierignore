@@ -1,0 +1,17 @@
+# Build outputs
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+
+# Public assets
+public/
+*.ico
+*.svg
+
+# Config files you don't want touched
+package-lock.json
+.env
+.env.*

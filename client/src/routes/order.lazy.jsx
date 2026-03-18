@@ -115,7 +115,7 @@ export default function Order() {
               </div>
             </div>
           </div>
-          <button className="add" type="submit">
+          <button className="add-to-cart-container" type="submit">
             Add to Cart
           </button>
           {loading ? (
@@ -127,7 +127,7 @@ export default function Order() {
                 description={selectedPizza.description}
                 image={selectedPizza.image}
               />
-              <p>{price}</p>
+              <p className="order-pizza-p">{price}</p>
             </div>
           )}
         </form>

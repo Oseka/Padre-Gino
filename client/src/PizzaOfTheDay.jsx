@@ -15,10 +15,10 @@ const PizzaOfTheDay = () => {
   return (
     <div className="pizza-of-the-day">
       <h2>Pizza of the Day</h2>
-      <div className="pizza-of-the-day">
+      <div className="pizza-of-the-day-info">
         <h3>{pizzaOfTheDay.name}</h3>
         <p> {pizzaOfTheDay.description}</p>
-        <p> {intl.format(pizzaOfTheDay.sizes.S)}</p>
+        <h4> {intl.format(pizzaOfTheDay.sizes.S)}</h4>
       </div>
       <img className="pizza-of-the-day-image" src={pizzaOfTheDay.image} alt={pizzaOfTheDay.name} />
     </div>

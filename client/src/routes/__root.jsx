@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createRootRoute, Outlet } from '@tanstack/react-router';
+import { createRootRoute, Outlet, Link } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import PizzaOfTheDay from '../PizzaOfTheDay';
@@ -21,6 +21,18 @@ export const Route = createRootRoute({
         <TanStackRouterDevtools />
         <ReactQueryDevtools />
       </>
+    );
+  },
+
+  notFoundComponent: () => {
+    return (
+      <div className="not-found">
+        <h1>404 - Pizza Lost in Transit!</h1>
+        <p>The page you are looking for doesn't exist.</p>
+        <Link to="/" style={{ color: 'var(--yellow)', fontWeight: 'bold' }}>
+          Return to the Homepage
+        </Link>
+      </div>
     );
   },
 });

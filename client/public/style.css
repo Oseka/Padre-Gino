@@ -123,79 +123,60 @@ h2::after {
   margin-left: 5%;
 }
 
-form div {
-  margin: 10px 0;
-  text-align: center;
-}
-
-form > div {
-  padding: 15px;
-  width: 100%;
-}
-
-form > div:first-child {
-  border-right: 1px solid #ccc;
-}
-
-form > div > div > label {
-  display: block;
-  font-size: 20px;
-  color: var(--secondary);
-  margin-bottom: 10px;
-}
-
 form select {
-  display: block;
-  font-size: 16px;
-  padding: 5px;
-  margin-bottom: 30px;
   width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 18px;
+  background: #fff;
+  margin-bottom: 25px;
+  cursor: pointer;
 }
 
 form input[type="radio"] {
-  display: none;
+  position: absolute; 
+  opacity: 0;        
+  pointer-events: none; 
 }
-
 form input + label {
-  height: 80px;
-  width: 80px;
-  border: 1px solid #999;
-  background-color: #ccc;
-  color: #999;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+  height: auto;
+  width: 140px;     
+  padding: 15px;      
+  border: 2px solid var(--border);
+  background-color: var(--white);
+  color: #666;
+  font-weight: bold;
+  border-radius: 12px;
   cursor: pointer;
-  margin: 0 15px 10px 15px;
+  margin: 0;         
+  transition: all 0.2s;
+  text-align: center;
+  display: flex;       
+  justify-content: center;
+  align-items: center;
 }
-
 form input:checked + label {
-  color: #333;
-  background-color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: #fff4f2;
 }
-
-form > div > div > label {
-  display: block;
-  font-size: 20px;
-  color: var(--secondary);
-  margin-bottom: 10px;
-}
-
 .pizza {
   line-height: 1.5;
 }
 
 .pizza img {
-  max-width: 200px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  max-width: 240px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
 }
 
 .pizza h1 {
   font-weight: normal;
   color: var(--secondary);
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .pizza p {
@@ -219,8 +200,18 @@ button,
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
-}
+  white-space: nowrap; 
+  height: fit-content; 
+  align-self: center;   
 
+}
+.add-to-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; 
+  min-width: 150px; 
+}
 button:disabled {
   opacity: 0.5;
   background-color: #ccc;
@@ -239,33 +230,53 @@ button:disabled {
 }
 
 .pizza-of-the-day {
+  margin-top: 80px;
+  padding: 60px 0;
   border-top: 1px solid var(--border);
-  margin-top: 50px;
-  width: 100%;
 }
 
 .pizza-of-the-day > div {
+  background: var(--white);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.pizza-of-the-day > h2 {
-  text-align: center;
+  gap: 40px;
 }
 
 .pizza-of-the-day-image {
-  max-width: 200px;
-  border-radius: 5px;
-  border: 1px solid var(--border);
+  max-width: 250px;
+  border-radius: 50%;
+  margin: 0 auto;         
+  display: block;
 }
-
-.pizza-of-the-day-info {
-  margin-right: 30px;
-  line-height: 2;
-  text-align: center;
+.pizza p, 
+.pizza-of-the-day-info p
+ {
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 0.95rem;
+  color: #555;     
+  line-height: 1.6; 
+  max-width: 500px; 
+  margin: 5px auto;
 }
-
+.pizza-of-the-day-info h4,
+.order-pizza-p {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+.pizza h1, 
+.pizza-of-the-day-info h3 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
 .order-page {
   max-width: 1300px;
   margin: 0 auto;
@@ -285,6 +296,22 @@ button:disabled {
   margin: 15px 0;
 }
 
+.cart p:last-of-type {
+  border-bottom: none;
+  font-size: 28px;
+  font-weight: bold;
+  border-top: 2px solid #eee;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+.cart li{
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 0.95rem;
+  color: #555;      
+  line-height: 1.6; 
+  max-width: 500px; 
+  margin: 5px auto;
+}
 .index h1 {
   color: var(--primary);
   font-family: var(--font);

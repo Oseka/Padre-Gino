@@ -4,7 +4,10 @@ import { RouterProvider, createRouter } from '@tanstack/react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { routeTree } from './routeTree.gen';
 
-const router = createRouter({ routeTree });
+const router = createRouter({
+  routeTree,
+  basepath: '/Padre-Gino/',
+});
 const queryClient = new QueryClient();
 
 const App = () => {

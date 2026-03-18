@@ -486,3 +486,84 @@ td img {
   font-weight: normal;
   font-size: 30px;
 }
+@media (max-width: 1024px) {
+  .order-page {
+    grid-template-columns: 1fr; 
+    max-width: 95%;
+  }
+
+  .cart {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    grid-template-areas: "logo cart";
+    grid-template-columns: 1fr auto;
+  }
+
+  .index {
+    grid-template-columns: 1fr; 
+    text-align: center;
+    margin: 60px auto;
+  }
+
+  .index-brand {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .pizza-of-the-day > div {
+    flex-direction: column; 
+    text-align: center;
+    gap: 20px;
+  }
+
+ 
+  .contact input, 
+  .contact textarea {
+    width: 90vw; 
+    max-width: 500px;
+  }
+
+  .order {
+    margin-left: 0;
+  }
+
+  .order-pizza {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  h2::after {
+    display: none;
+  }
+
+  .order form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input + label {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .past-orders {
+    width: 100%;
+    overflow-x: auto; 
+  }
+  
+  .nav-cart {
+    font-size: 30px;
+  }
+}
